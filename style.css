@@ -1,0 +1,110 @@
+body{
+    margin: 0px;
+}
+
+main{
+    height: 750px;
+    background-image: url('./image/background.jpeg');
+    background-size: 320%; 
+}
+
+@font-face {
+    font-family: 'Modern Love Grunge';
+    src: url('./image/modernlove-grunge.ttf') format('truetype');
+}
+
+.headline{
+    height: 200px;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-style: italic;
+    color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+.result{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 이미지에 대한 스타일 */
+.result img {
+    height: 250px; /* 이미지의 너비를 조정할 수 있습니다. */
+    width: auto; /* 이미지의 높이는 자동으로 조절됩니다. */
+}
+
+.result div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.position-bottom{
+    position: absolute;
+    bottom: 200px;
+}
+
+.change-font{
+    padding-top: 20px;
+    font-family: 'Modern Love Grunge', sans-serif;
+    font-size: 20px;
+}
+
+.input-style{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-style input[type="number"] {
+    height: 30px;
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.button-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.go-button{
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    background-color: plum;
+    border-radius: 100px;
+    font-size: inherit;
+    color: #2941ab;;
+    font-weight: 700;
+    border: none;
+}
+
+.reset-button{
+    margin-top: 5px;
+    padding: 8px 15px;
+    background-color: plum;
+    border-radius: 100px;
+    font-size: inherit;
+    color: #2941ab;;
+    font-weight: 700;
+    border: none;
+}
+
+.go-button:hover{
+    transform: scale(1.03);
+    background-color: rgb(219, 137, 219);
+}
+.reset-button:hover{
+    transform: scale(1.03);
+    background-color: rgb(219, 137, 219);
+}

@@ -41,15 +41,19 @@ function play(){
     console.log("chance", chances)
 
     if(userValue < computerNum){
-        resultArea.textContent = "up!!"
+        resultArea.innerHTML = '<img src="./image/up.jpg"> <span>UP!!</span>';
     }
     else if(userValue > computerNum){
-        resultArea.textContent = "down!!"
+        resultArea.innerHTML = '<img src="./image/down.jpg"> <span>DOWN!!</span>';
     }
     else{
-        resultArea.textContent = "맞췄습니다!!!!"
+        resultArea.innerHTML = '<img src="./image/celebrate.webp"> <span>맞췄습니다!!</span>';
         gameOver = true;
     }
+
+    // 텍스트, 이미지가 수평으로 정렬
+    resultArea.style.display = "flex";
+    resultArea.style.alignItems = "center";
 
     history.push(userValue);
     console.log(history);
@@ -64,12 +68,19 @@ function play(){
 }
 
 function reset(){
+    // 기회 5번으로 리셋
+    chances = 5;
+    chanceArea.textContent = `남은기회 : ${chances}번`
     // user input창 깨끗이 정리
     userInput.value = "";
     // 결과창 깨끗이 정리
     resultArea.textContent = "결과창";
     // 새로운 랜덤번호 생성 (computerNum)
     randomNum();
+    // 버튼 비활성화 해제
+    playButton.disabled = false;
+    // 결과창 물음표
+    resultArea.innerHTML = '<img src="./image/question-mark.png">'
 }
 
 randomNum();
